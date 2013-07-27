@@ -25,7 +25,7 @@ public class Kernel {
 	
 	public Kernel(){
 		
-    	win = new Window();
+    	win = new Window(this);
     	event = new Event();
 
 	}

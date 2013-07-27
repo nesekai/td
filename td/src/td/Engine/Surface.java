@@ -5,12 +5,16 @@ import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
 class Surface extends JPanel {
-
-	public Surface() {
+	Window window;
+	
+	public Surface(Window win) {
+		window = win;
 	}
 
 	public void doDrawing(Graphics g) {
 		
+		window.setGraphics2D((Graphics2D)g);
+		window.getKernel().getEvent().getCurrent().render();		
     }
 
     @Override

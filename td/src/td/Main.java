@@ -12,7 +12,8 @@ public class Main {
     	System.out.println("Start");
     	Kernel kernel = new Kernel();
     	kernel.getWindow().setVisible(true);
-    	kernel.getEvent().add(new Menu(kernel));
+    	kernel.getEvent().add(new Menu(kernel,"menu"));
+    	kernel.getEvent().setCurrent("menu");
     	kernel.run();
     }
 }
