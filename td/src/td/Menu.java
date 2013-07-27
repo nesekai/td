@@ -22,8 +22,7 @@ public class Menu extends BCore {
 	
 	public void render()
 	{
-		Graphics2D g2d = (Graphics2D) getKernel().getWindow().getGraphics2D();
-	    g2d.drawString(Integer.toString(count), count%512, count%512);
+		getKernel().getText().Draw(40, 40, this.toString());
 	}
 	
 }

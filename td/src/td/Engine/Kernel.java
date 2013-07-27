@@ -6,6 +6,7 @@ public class Kernel {
 	
 	Window win;
 	Event event;
+	Text text;
 
 	public Window getWindow() {
 		return win;
@@ -15,6 +16,10 @@ public class Kernel {
 		return event;
 	}
 
+	public Text getText() {
+		return text;
+	}
+	
 	public void run(){
     	while(true)
     	{
@@ -27,6 +32,7 @@ public class Kernel {
 		
     	win = new Window(this);
     	event = new Event();
+    	text = new Text(this);
 
 	}
 	

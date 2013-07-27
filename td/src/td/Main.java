@@ -13,7 +13,8 @@ public class Main {
     	Kernel kernel = new Kernel();
     	kernel.getWindow().setVisible(true);
     	kernel.getEvent().add(new Menu(kernel,"menu"));
-    	kernel.getEvent().setCurrent("menu");
+    	kernel.getEvent().add(new Menu(kernel,"menu2"));
+    	kernel.getEvent().setCurrent("menu2");
     	kernel.run();
     }
 }
