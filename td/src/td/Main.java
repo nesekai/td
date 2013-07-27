@@ -1,10 +1,18 @@
 package td;
 
-public class Main {
+import td.Engine.BCore;
+import td.Engine.Window;
+import td.Engine.Event;
+import td.Engine.Kernel;
 
+public class Main {
+	
     public static void main(String[] args) {
+    	
     	System.out.println("Start");
-    	Window ps = new Window();
-        ps.setVisible(true);
+    	Kernel kernel = new Kernel();
+    	kernel.getWindow().setVisible(true);
+    	kernel.getEvent().add(new Menu(kernel));
+    	kernel.run();
     }
 }
